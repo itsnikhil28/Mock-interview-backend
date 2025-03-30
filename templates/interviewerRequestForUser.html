@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid #004aad;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .header h2 {
+            color: #004aad;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #f0f5ff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #004aad;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #222;
+        }
+
+        .steps {
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .steps li {
+            background: #004aad;
+            color: white;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .steps li span {
+            width: 28px;
+            height: 28px;
+            font-size: 1em;
+            background: white;
+            color: #004aad;
+            font-weight: bold;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .button {
+            display: block;
+            background: #ff9800;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #e68900;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>🎉 Interviewer Request Received!</h2>
+        </div>
+
+        <p class="content">Hello <b>{{name}}</b>,</p>
+        <p class="content">Thank you for showing interest in becoming an **interviewer** at Interview Pilot. Your
+            request has been successfully received! 🚀</p>
+
+        <div class="info-box">
+            <p><b>🏢 Company:</b> {{company}}</p>
+            <p><b>💼 Experience:</b> {{experience}} years</p>
+            <p><b>🔗 LinkedIn Profile:</b> <a href="{{linkedin}}" target="_blank" style="color: #004aad;">View
+                    Profile</a></p>
+            <p><b>✉️ Message:</b> {{message}}</p>
+        </div>
+
+        <h3 style="color: #004aad;">⏳ What happens next?</h3>
+        <ul class="steps">
+            <li><span>1</span> Our team will **review** your request carefully.</li>
+            <li><span>2</span> The verification process may take **3-5 business days**.</li>
+            <li><span>3</span> You will receive an update **via email** once your request is approved.</li>
+            <li><span>4</span> If approved, you will get **exclusive access** to our interviewer dashboard.</li>
+        </ul>
+
+        <p class="content">We appreciate your patience during this process. If you have any questions, feel free to
+            reach out to our support team.</p>
+
+        <a href="mailto:nk1565123@gmail.com" class="button">📩 Contact Support</a>
+
+        <p class="footer">Thank you, <br><b>Interview Pilot Team</b></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid #004aad;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .header h2 {
+            color: #004aad;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .meeting-info {
+            background: #f0f5ff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #004aad;
+        }
+
+        .meeting-info p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #222;
+        }
+
+        .steps {
+            margin-top: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .steps li {
+            background: #004aad;
+            color: white;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .steps li span {
+            width: 28px;
+            height: 28px;
+            line-height: 2em;
+            font-size: 1em;
+            background: white;
+            color: #004aad;
+            font-weight: bold;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .button {
+            display: block;
+            background: #ff9800;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #e68900;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>📅 You're Invited to a Meeting</h2>
+        </div>
+
+        <p class="content">Hello <b>{{name}}</b>,</p>
+        <p class="content">You have been invited to join an online meeting. Please find the details below:</p>
+
+        <div class="meeting-info">
+            <p><b>📌 Meeting ID:</b> {{meetingId}}</p>
+            <p><b>🔗 Meeting URL:</b> <a href="{{meetingUrl}}" target="_blank" style="color: #004aad;">Click Here to
+                    Join</a></p>
+        </div>
+
+        <h3 style="color: #004aad;">🚀 How to Join:</h3>
+        <ul class="steps">
+            <li><span>1</span> Sign in to your account.</li>
+            <li><span>2</span> Go to the "Join Meeting" section.</li>
+            <li><span>3</span> Enter the Meeting ID or paste the Meeting URL.</li>
+            <li><span>4</span> Click on <b>&nbsp;Join Meeting&nbsp;</b> to start.</li>
+        </ul>
+
+        <a href="{{meetingUrl}}" target="_blank" class="button">🔗 Join Meeting Now</a>
+
+        <p class="footer">Thank you, <br><b>Interview Pilot Team</b></p>
+    </div>
+</body>
+
+</html>

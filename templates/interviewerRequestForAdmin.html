@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid #d9534f;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .header h2 {
+            color: #d9534f;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #fef3f3;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #d9534f;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #222;
+        }
+
+        .button {
+            display: block;
+            background: #5bc0de;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #31b0d5;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>🚀 New Interviewer Request</h2>
+        </div>
+
+        <p class="content">Hello Admin,</p>
+        <p class="content">A new **Interviewer Request** has been received. Below are the details:</p>
+
+        <div class="info-box">
+            <p><b>👤 Candidate Name:</b> {{candidateName}}</p>
+            <p><b>📧 Candidate Email:</b> {{candidateEmail}}</p>
+            <p><b>🏢 Company:</b> {{company}}</p>
+            <p><b>💼 Experience:</b> {{experience}} years</p>
+            <p><b>🔗 LinkedIn Profile:</b> <a href="{{linkedin}}" target="_blank" style="color: #d9534f;">View
+                    Profile</a></p>
+            <p><b>✉️ Message:</b> {{message}}</p>
+            <p><b>📎 Supporting Document:</b> <a href="{{documenturl}}" target="_blank" style="color: #d9534f;">View
+                    Document</a></p>
+        </div>
+
+        <p class="content">Please review this request within **3-5 business days** and take necessary action.</p>
+
+        <a href="{{documenturl}}" target="_blank" class="button">📂 Review Documents</a>
+
+        <p class="footer">Thank you, <br><b>Interview Pilot Team</b></p>
+    </div>
+</body>
+
+</html>
