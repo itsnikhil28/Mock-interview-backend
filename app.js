@@ -241,6 +241,50 @@ app.post("/api/send-interviewer-request-email", async (req, res) => {
   }
 });
 
+app.post("/api/send-candidate-request-email", async (req, res) => {
+  const { intervieweremail, interviewername, userName, userEmail, resume } = req.body;
+
+  if (!interviewername || !intervieweremail || !userName || !userEmail) {
+    return res.status(400).json({ success: false, message: "Missing required fields" });
+  }
+
+  try {
+    let templateForUser = fs.readFileSync(path.join(__dirname, "templates/interviewRequestUser.html"), "utf-8");
+    let templateForInterviewer = fs.readFileSync(path.join(__dirname, "templates/interviewRequestInterviewer.html"), "utf-8");
+
+    let userTemplate = templateForUser
+      .replace(/{{candidateName}}/g, userName)
+      .replace(/{{candidateEmail}}/g, userEmail)
+      .replace(/{{resume}}/g, resume);
+
+    await transporter.sendMail({
+      from: `"Interview Pilot" <${process.env.MAIL_USERNAME}>`,
+      to: userEmail,
+      subject: "Your Interview Request Recieved",
+      html: userTemplate,
+    });
+
+    // Replace placeholders for the interviewer email
+    let interviewerTemplate = templateForInterviewer
+      .replace(/{{candidateName}}/g, userName)
+      .replace(/{{candidateEmail}}/g, userEmail)
+      .replace(/{{interviewerName}}/g, interviewername)
+      .replace(/{{resume}}/g, resume);
+
+    // Send email to the interviewer
+    await transporter.sendMail({
+      from: `"Interview Pilot" <${process.env.MAIL_USERNAME}>`,
+      to: intervieweremail,
+      subject: "New Interview Request Received",
+      html: interviewerTemplate,
+    });
+
+    return res.status(200).json({ success: true, message: "Emails sent successfully!" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return res.status(500).json({ success: false, message: "Failed to send emails." });
+  }
+});
 
 
 const PORT = 5000;

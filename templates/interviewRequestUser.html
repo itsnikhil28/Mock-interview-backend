@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid #28a745;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .header h2 {
+            color: #28a745;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #e9f8ec;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #28a745;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #222;
+        }
+
+        .button {
+            display: block;
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .tips {
+            background: #fff3cd;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .tips p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>✅ Interview Request Received</h2>
+        </div>
+
+        <p class="content">Hello <b>{{candidateName}}</b>,</p>
+        <p class="content">Your request for an interview has been received successfully.</p>
+
+        <div class="info-box">
+            <p><b>📆 Interview Status:</b> Pending - Awaiting Interviewer Scheduling</p>
+            <p><b>✉️ Email:</b> {{candidateEmail}}</p>
+            <p><b>📄 Resume:</b> <a href="{{resume}}" target="_blank" style="color: #28a745;">View Resume</a></p>
+        </div>
+
+        <p class="content">The interviewer will review your request and schedule an interview at a suitable time. You
+            will receive an email notification once your interview is scheduled.</p>
+
+        <p class="content">Thank you for using <b>Interview Pilot</b>! We wish you the best in your interview process.
+        </p>
+
+        <div class="tips">
+            <p><b>📝 Interview Preparation Tips:</b></p>
+            <ul>
+                <li>Research the company and its role requirements.</li>
+                <li>Prepare for common interview questions related to your field.</li>
+                <li>Ensure your internet connection is stable for video interviews.</li>
+                <li>Dress professionally and choose a quiet, well-lit space.</li>
+                <li>Practice with mock interviews to build confidence.</li>
+            </ul>
+        </div>
+
+        <p class="content">If you have any questions, feel free to reach out to our support team.</p>
+
+        <a href="mailto:support@interviewpilot.com" class="button">📩 Contact Support</a>
+
+        <p class="footer">Thank you, <br><b>Interview Pilot Team</b></p>
+    </div>
+</body>
+
+</html>
