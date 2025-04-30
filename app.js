@@ -80,6 +80,17 @@ app.post("/api/uploadResume", upload.single("resume"), (req, res) => {
   }
 });
 
+app.post("/api/uploadProfilePic", upload.single("profilePic"), (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+
+    res.status(200).json({ message: "Upload successful", url: req.file.path });
+  } catch (error) {
+    res.status(500).json({ message: "Upload Unsuccessful", error: error.message });
+  }
+});
+
+
 app.post("/api/send-invite-email", async (req, res) => {
   // return res.status(400).json({ success: false, message: req.body });
 
